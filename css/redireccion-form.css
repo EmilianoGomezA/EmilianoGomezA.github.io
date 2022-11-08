@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "F1 Wide";
+    src: url("../assets/fonts/Formula1-Wide.otf");
+}
+
+@font-face {
+    font-family: "F1 Bold";
+    src: url("../assets/fonts/Formula1-Bold.otf");
+}
+
+@font-face {
+    font-family: "F1 Regular";
+    src: url("../assets/fonts/Formula1-Regular.otf");
+}
+
+*{
+    font-family: "F1 Bold";
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #d80000, #616161);
+}
+
+.mensaje-exito{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    height: 600px;
+    background-color: black;
+    color: #F0F0F0;
+    font-size: 24px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 1);
+}
+
+.mensaje-exito img{
+    width: 200px;
+}
+
+.mensaje-exito a{
+    text-decoration: underline;
+    color: white;
+    margin-top: 30px;
+    font-size: 22px;
+}
+
+.mensaje-exito a:hover{
+    color: #d80000;
+    transform: scale(1.05);
+}
