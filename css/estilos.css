@@ -1175,7 +1175,10 @@ input[id="8"]:checked ~ .paginacion .elem-paginacion[for="8"]{
     }
 
     .container__menu{
-        height: 50px;
+        max-width: 400px;
+        max-height: 50px;
+        width: 100%;
+        height: 100%;
     }
     
     #label__check{
@@ -1188,13 +1191,15 @@ input[id="8"]:checked ~ .paginacion .elem-paginacion[for="8"]{
     }
     
     .header__superior{
+        max-width: 400px;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
 
     .formulatotal img{
-        max-width: 500px;
+        max-width: 400px;
         max-height: 50px;
         width: 100%;
         height: 100%;
@@ -1293,11 +1298,14 @@ input[id="8"]:checked ~ .paginacion .elem-paginacion[for="8"]{
     }
 
     main{
+        max-width: 400px;
+        width: 100%;
         margin-top: 130px;
     }
 
     article{
-        max-width: 720px;
+        max-width: 400px;
+        width: 100%;
         margin: 20px auto;
         padding: 40px;
         display: grid;
@@ -1310,7 +1318,7 @@ input[id="8"]:checked ~ .paginacion .elem-paginacion[for="8"]{
         text-align: center;
         position: relative;
         padding: 5px 5px;
-        max-width: 750px;
+        max-width: 400px;
         width: 100%;
         background-color: black;
         border-radius: 10px;
@@ -1320,7 +1328,7 @@ input[id="8"]:checked ~ .paginacion .elem-paginacion[for="8"]{
         text-align: left;
         position: relative;
         padding: 20px 20px;
-        max-width: 750px;
+        max-width: 400px;
         background-color: #d80000;
         background-position: right;
         font-size: 12px;
@@ -1337,8 +1345,10 @@ input[id="8"]:checked ~ .paginacion .elem-paginacion[for="8"]{
     }
 
     .abrir_form{
-        width: 120px;
-        height: 40px;
+        max-width: 120px;
+        max-height: 40px;
+        width: 100%;
+        height: 100%;
         font-size: 14px;
     }
 
@@ -1350,6 +1360,7 @@ input[id="8"]:checked ~ .paginacion .elem-paginacion[for="8"]{
         text-align: center;
         justify-content: center;
         max-width: 300px;
+        width: 100%;
     }
 
     .formulario h1{
