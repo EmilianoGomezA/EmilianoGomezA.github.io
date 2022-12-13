@@ -21,11 +21,47 @@
     text-decoration: none;
 }
 
+/*LOADER*/
+
+.hidden{
+    overflow: hidden;
+}
+
+.center_loader{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    z-index: 150;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: #D80000;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    }
+  
+
 /*HEADER SUPERIOR*/
 
 header{
     width: 100%;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     background-color: black;
@@ -101,7 +137,6 @@ nav ul li{
 
 nav  > ul > li{
     padding: 0px 80px;
-    border-radius: 5px;
 }
 
 nav > ul > li:first-child > a{
@@ -120,7 +155,7 @@ nav > ul > li:first-child:hover > a{
 }
 
 nav > ul > li > a{
-    width: 100%;
+    /*width: 100%;*/
     height: 100%;
     display: flex;
     align-items: center;
@@ -139,7 +174,7 @@ nav > ul > li > a{
 
 nav > ul > li > a:hover{
     transform: scale(1.1);
-    border-radius: 5px;
+    
     background-color: #FB0F0C;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
@@ -160,16 +195,13 @@ nav ul li ul{
     background-color: #616161;
     position: absolute;
     top: 74px;
+    left: 70px;
     padding: 10px 0px;
     visibility: hidden;
     opacity: 0;
     z-index: 10;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
     transition: all 300ms ease;
-}
-
-nav > ul > li > ul:last-child{
-    left: 70px;
 }
 
 
@@ -252,7 +284,7 @@ nav ul li ul li a:hover{
 main{
     background-color: #F0F0F0;
     padding: 40px 20px;
-    margin-top: 300px;
+    margin-top: 0px;
 }
 
 article{
@@ -501,7 +533,7 @@ table tr:nth-child(even){
         background-color: #F0F0F0;
 }
 
-table tr:hover{
+.container_tabla table tr:hover{
     background: black;
     color: #fff;
     padding-left: 100px;
@@ -793,12 +825,563 @@ input[id="8"]:checked ~ .paginacion .elem-paginacion[for="8"]{
 
 }
 
+/*INFO PILOTOS*/
+
+.container_pilotos{
+    max-width: 1200px;
+    border-radius: 5px;
+}
+
+.container_info{
+    max-width: 1200px;
+    width: 90%;
+    padding: 20px;
+    border-top: 10px solid #d80000;
+    border-left: 10px solid #d80000;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    position: relative;
+}
+
+.img_piloto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    margin-top: 20px;
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+.img_piloto img{
+    width: 300px;
+    background-color: rgb(120, 120, 120);
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 5px; 
+    margin-bottom: 30px;
+}
+
+.vitrina{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.vitrina img{
+    width: 60px;
+}
+
+.vitrina_hamilton{
+   top: 340px;
+}
+
+.vitrina_hamilton img{
+    width: 45px;
+}
+
+.campeonato{
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.campeonato:last-child{
+    margin-right: 0px;
+}
+
+.campeonato h6{
+    display: flex;
+    justify-content: center;
+    font-family: "F1 Bold";
+    font-size: 12px;
+}
+
+.info_piloto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.info_piloto h1{
+    font-family: "F1 Bold";
+    font-size: 34px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.info_piloto .num_piloto{
+    width: 80px;
+    margin-bottom: 30px;
+}
+
+.info_piloto h2{
+    font-family: "F1 Bold";
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.datos_piloto tr td{
+    background-color: white;
+    padding: 5px 5px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.datos_piloto tr:hover{
+    background-color: white;
+    color: black;
+    padding-left: 0px;
+    font-size: 14px;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.5);
+}
+
+.datos_piloto .dato{
+    background-color: #d80000;
+    font-family: "F1 Bold";
+}
+
+.datos_piloto .info{
+    min-width: 350px;
+}
+
+/*.datos_piloto img{
+    margin-right: 5px;
+}*/
+
+.bandera-piloto img{
+    position: relative;
+    top: 1px;
+    width: 20px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+.escuderia-piloto img{
+    position: relative;
+    top: 2px;
+    width: 25px;
+    height: 15px;
+}
+
+.container_info p{
+    grid-column: 1/3;
+    font-size: 15px;
+    text-align: justify;
+    margin-top: 40px;
+}
+
+.container_info .trayectoria_hamilton{
+    margin-top: 100px;
+}
+
+.tabla_trayectoria{
+    grid-column: 1/3;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.tabla_trayectoria h2{
+    font-family: "F1 Bold";
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tabla_trayectoria img{
+    width: 25px;
+    height: 15px;
+    border: 1px solid black;
+}
+
+.tabla_trayectoria table th{
+    border: 1px solid black;
+}
+
+.tabla_trayectoria table td{
+    border: 1px solid black;
+    font-size: 13px;
+    padding: 10px 5px;
+}
+
+.tabla_trayectoria_mobile{
+    grid-column: 1/3;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    display: none;
+}
+
+.tabla_trayectoria_mobile h2{
+    font-family: "F1 Bold";
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tabla_trayectoria_mobile th{
+    background-color: #616161;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.tabla_trayectoria_mobile td{
+    padding: 5px 5px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.tabla_trayectoria_mobile img{
+    width: 25px;
+    height: 15px;
+    border: 1px solid black;
+    margin-bottom: 3px;
+}
+
+.tabla_trayectoria_mobile .bandera_gp{
+    background-color: #d80000;
+    color: #fff;
+    min-width: 100px;
+}
+
+.tabla_trayectoria_mobile .bandera_gp h6{
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.tabla_trayectoria_mobile .posicion_gp{
+    background-color: #F0F0F0;
+    font-size: 13px;
+    font-weight: 100;
+    min-width: 100px;
+}
+
+/*INFO ESCUDERÍAS*/
+
+.container_escuderias{
+    max-width: 1200px;
+    border-radius: 5px;
+}
+
+.container_info_escuderias{
+    max-width: 1200px;
+    width: 90%;
+    padding: 20px;
+    border-top: 10px solid #d80000;
+    border-left: 10px solid #d80000;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.nombre_escuderia{
+    grid-column: 1/3;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.nombre_escuderia h1{
+    font-family: "F1 Bold";
+    font-size: 36px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.img_escuderia_only{
+    grid-column: 1/3;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.img_escuderia_only img{
+    width: 500px;
+}
+
+.img_escuderia{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.img_escuderia_sponsor{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.img_escuderia img{
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.img_escuderia_sponsor img{
+    width: 400px;
+}
+
+.pilotos_escuderia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+.pilotos_escuderia h2{
+    font-family: "F1 Bold";
+    font-size: 24px;
+}
+
+.piloto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.piloto a{
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.piloto a:last-child{
+    margin-right: 0px;
+}
+
+.piloto a:hover{
+    transform: scale(1.1);
+    transition: all 300ms ease;
+}
+
+.piloto img{
+    width: 150px;
+    background-color: rgb(120, 120, 120);
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 5px; 
+    margin-bottom: 10px;
+}
+
+.piloto h3{
+    font-family: "F1 Bold";
+    font-size: 13px;
+    color: black;
+    text-align: center;
+}
+
+.monoplaza_escuderia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-column: 2/3;
+    grid-row: 4/5;
+    position: relative;
+}
+
+.monoplaza_escuderia h2{
+    font-family: "F1 Bold";
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+}
+
+.monoplaza{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    height: fit-content;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.monoplaza a{
+    margin-right: 30px;
+}
+
+.monoplaza a:last-child{
+    margin-right: 0px;
+}
+
+.monoplaza img{
+    width: 400px;
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 5px; 
+    margin-bottom: 10px;
+}
+
+.monoplaza h3{
+    font-family: "F1 Bold";
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    position: absolute;
+    bottom: 75px;
+}
+
+.info_escuderia{
+    grid-column: 1/3;
+    grid-row: 3/4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info_escuderia h2{
+    font-family: "F1 Bold";
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.datos_escuderia{
+    margin-bottom: 80px;
+}
+
+.datos_escuderia tr td{
+    background-color: white;
+    padding: 5px 5px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.datos_escuderia tr:hover{
+    background-color: white;
+    color: black;
+    padding-left: 0px;
+    font-size: 14px;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.5);
+}
+
+.datos_escuderia .dato{
+    background-color: #d80000;
+    font-family: "F1 Bold";
+    min-width: 150px;
+}
+
+.datos_escuderia .info{
+    min-width: 300px;
+}
+
+.vitrina_escuderias{
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.margen_vitrina{
+    border: 8px solid #EFB810;
+    border-radius: 20px;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.titulo_vitrina{
+    display: flex;
+    justify-content: center;
+}
+
+.titulo_vitrina h2{
+    text-align: center;
+    font-family: "F1 Bold";
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.trofeos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 40px; 
+}
+
+.trofeos img{
+    width: 90px;
+}
+
 /*RESPONSIVE*/
 
-@media screen and (max-width: 1110px){
+@media screen and (max-width: 1250px){
+
+    nav > ul > li{
+        padding: 0px 60px;
+    }
+
+    nav ul li:last-child a{
+        white-space: nowrap;
+    }
+
+    nav ul li ul{
+        width: 300px;
+        left: 50px;
+    }
+
+}
+
+@media screen and (max-width: 1165px){
 
     nav > ul > li{
         padding: 0px 50px;
+    }
+
+    nav ul li ul{
+        width: 250px;
+        left: 40px;
+    }
+
+    nav ul li ul li:hover a{
+        display: block;
+        color: #fff;
+        padding-left: 14px;
+        font-size: 13px;
+        text-transform: uppercase;
+        transition: all 10ms ease;
+        transform: scale(1.0);
+    }
+
+    nav ul li ul li a{
+        font-size: 13px;
     }
 
     .formulatotal img{
@@ -898,6 +1481,58 @@ input[id="8"]:checked ~ .paginacion .elem-paginacion[for="8"]{
         width: 16px;
         height: 16px;
     }
+
+    .container_pilotos{
+        padding: 20px 10px;
+    }
+
+    .container_info{
+        gap: 20px;
+    }
+
+    .img_piloto{
+        justify-content: center;
+    }
+
+    .img_piloto img{
+        width: 250px;
+    }
+
+    .datos_piloto .info{
+        min-width: 200px;
+    }
+
+    .vitrina_hamilton{
+        top: 300px;
+        bottom: 20px;
+    }
+
+    .container_info .trayectoria_hamilton{
+        margin-top: 30px;
+    }
+
+    .tabla_trayectoria img{
+        width: 22px;
+        height: 14px;
+        border: 1px solid black;
+        margin-bottom: 5px;
+    }
+    
+    .tabla_trayectoria table th{
+        border: 1px solid black;
+    }
+    
+    .tabla_trayectoria table td{
+        border: 1px solid black;
+        font-size: 12px;
+        padding: 10px 5px;
+    }
+
+    /* ESCUDERIAS */
+
+    .datos_escuderia th, td{
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 965px){
@@ -917,6 +1552,29 @@ input[id="8"]:checked ~ .paginacion .elem-paginacion[for="8"]{
         width: 100%;
         padding: 0px 20px;
         width: 100%;
+    }
+
+    nav ul li ul{
+        left: 10px;
+    }
+
+    nav ul li ul li a{
+        font-size: 13px;
+    }
+
+    nav ul li ul li:hover a{
+        display: block;
+        color: #fff;
+        padding-left: 14px;
+        font-size: 13px;
+        text-transform: uppercase;
+        transition: all 10ms ease;
+        transform: scale(1.0);
+    }
+
+    .texto_presentacion h3{
+        padding: 40px;
+        font-weight: 100;
     }
 
     .fastest_lap{
@@ -939,6 +1597,71 @@ input[id="8"]:checked ~ .paginacion .elem-paginacion[for="8"]{
         min-width: 150px;
     }
 
+    /*.vitrina_hamilton{
+        bottom: -50px;
+    }*/
+
+    .tabla_trayectoria{
+        padding-left: 80px;
+    }
+
+    .tabla_trayectoria img{
+        width: 15px;
+        height: 10px;
+    }
+
+    .tabla_trayectoria table td{
+        border: 1px solid black;
+        font-size: 10px;
+        padding: 10px 2px;
+    }
+
+    /* ESCUDERIAS */
+
+    .container_info_escuderias{
+        max-width: 965px;
+        width: 100%;
+    }
+
+    .img_escuderia img{
+        max-width: 200px;
+        width: 100%;
+    }
+    
+    .img_escuderia_sponsor img{
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .piloto img{
+        width: 120px;
+    }
+
+    .piloto h3{
+        white-space: nowrap;
+        font-size: 11px;
+    }
+
+    .monoplaza img{
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .vitrina_escuderias img{
+        width: 60px;
+    }
+
+}
+
+@media screen and (max-width:805px){
+
+    .vitrina_hamilton{
+        top: 320px;
+    }
+
+    .container_info .trayectoria_hamilton{
+        margin-top: 20px;
+    }
 }
 
 @media screen and (max-width: 720px){
@@ -996,25 +1719,33 @@ input[id="8"]:checked ~ .paginacion .elem-paginacion[for="8"]{
     }
 
     nav > ul > li > a:hover{
-        transform: scale(1);
+        transform: scale(1.0);
     }
-
 
     nav ul li ul{
-        left: 200px;
+        left: 150px;
         height: 400px;
+        width: 300px;
     }
-
 
     nav ul li ul li a{
         display: block;
         color: #fff;
         padding: 20px;
-        padding-left: 14px;
         margin-top: 10px;
         font-size: 14px;
         text-transform: uppercase;
         transition: all 10ms ease;
+    }
+
+    nav ul li ul li:hover a{
+        display: block;
+        color: #fff;
+        padding: 20px;
+        font-size: 14px;
+        text-transform: uppercase;
+        transition: all 10ms ease;
+        transform: scale(1.0);
     }
 
     nav ul li:hover ul{
@@ -1044,7 +1775,7 @@ input[id="8"]:checked ~ .paginacion .elem-paginacion[for="8"]{
     }
 
     main{
-        margin-top: 180px;
+        margin-top: 0px;
     }
 
     article{
@@ -1057,6 +1788,12 @@ input[id="8"]:checked ~ .paginacion .elem-paginacion[for="8"]{
         overflow: auto;
     }
 
+    .presentacion{
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
     .texto_presentacion > h2 > img{
         text-align: center;
         position: relative;
@@ -1065,6 +1802,19 @@ input[id="8"]:checked ~ .paginacion .elem-paginacion[for="8"]{
         width: 100%;
         background-color: black;
         border-radius: 10px;
+    }
+
+    .texto_presentacion h3{
+        padding: 30px;
+        font-size: 14px;
+    }
+
+    .lista_ft{
+        font-size: 14px;
+    }
+
+    .descripcion_stats{
+        font-size: 13px;
     }
 
     .formulario{
@@ -1173,6 +1923,245 @@ input[id="8"]:checked ~ .paginacion .elem-paginacion[for="8"]{
         height: 25px;
     }
 
+    .container_pilotos{
+        max-width: 720px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0px;
+    }
+
+    .container_info{
+        display: flex;
+        flex-direction: column;
+        border: 10px solid #d80000;
+        max-width: 720px;
+        gap: 0px;
+    }
+
+    .img_piloto{
+        order: 1;
+        height: 200px;
+    }
+
+    .img_piloto img{
+        width: 200px;
+        margin-bottom: 20px;
+        margin-top: 0px;
+    }
+
+    .info_piloto{
+        order: 2;
+        margin-top: 0px;
+    }
+
+    .info_piloto h1{
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .info_piloto .num_piloto{
+        width: 60px;
+    }
+
+    .info_piloto h2{
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .info_piloto th, td{
+        font-size: 12px;
+    }
+
+    .datos_piloto .info{
+        min-width: 200px;
+    }
+
+    .bandera-piloto img{
+        position: relative;
+        top: 0px;
+        width: 14px;
+        height: 9px;
+        margin-right: 5px;
+    }
+    
+    .escuderia-piloto img{
+        position: relative;
+        top: 2px;
+        width: 15px;
+        height: 12px;
+    }
+
+    .vitrina{
+        order: 3;
+        position: static;
+        margin-top: 20px;
+    }
+
+    .vitrina img{
+        width: 40px;
+    }
+
+    .container_info p{
+        order: 4;
+        margin-top: 30px;
+        font-size: 12px;
+    }
+
+    .container_info .bio_hamilton{
+        margin-top: 30px;
+    }
+
+    .tabla_trayectoria{
+        display: none;
+    }
+
+    .tabla_trayectoria_mobile{
+        display: flex;
+        order: 4;
+        margin-top: 50px;
+    }
+
+    .tabla_trayectoria_mobile h2{
+        font-size: 18px;
+    }
+
+    .tabla_trayectoria_mobile th{
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .tabla_trayectoria_mobile td{
+        padding: 5px 0px;
+    }
+
+    .tabla_trayectoria_mobile .bandera_gp h6{
+        font-size: 10px;
+    }
+
+    .tabla_trayectoria_mobile .posicion_gp{
+        font-size: 12px;
+    }
+
+    /*ESCUDERIAS*/
+
+    .container_escuderias{
+        max-width: 720px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .container_info_escuderias{
+        max-width: 720px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        border: 10px solid #d80000;
+    }
+
+    .nombre_escuderia{
+        order: 1;
+        margin-bottom: 30px;
+    }
+
+    .nombre_escuderia h1{
+        margin-bottom: 0px;
+    }
+
+    .img_escuderia{
+        order: 2;
+        margin-bottom: 50px;
+    }
+
+    .img_escuderia img{
+        min-width: 200px;
+        max-width: 250px;
+        width: 100%;
+    }
+
+    .img_escuderia_sponsor{
+        order: 3;
+    }
+
+    .img_escuderia_sponsor img{
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .info_escuderia{
+        order: 4;
+    }
+
+    .datos_escuderia{
+        margin-bottom: 40px;
+    }
+
+    .datos_escuderia .dato{
+        min-width: 0px;
+    }
+    
+    .datos_escuderia .info{
+        min-width: 0px;
+    }
+
+    .pilotos_escuderia{
+        order: 5;
+    }
+
+    .piloto img{
+        width: 120px;
+    }
+
+    .piloto a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .piloto a:hover{
+        transform: scale(1.0);
+        transition: none;
+    }
+
+    .piloto h3{
+        font-size: 10px;
+    }
+
+    .monoplaza_escuderia{
+        order: 6;
+    }
+
+    .monoplaza img{
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .monoplaza_escuderia h2{
+        position: static;
+    }
+
+    .monoplaza h3{
+        position: static;
+    }
+
+    .vitrina_escuderias{
+        order: 6;
+        width: 100%;
+    }
+
+    .margen_vitrina{
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .vitrina_escuderias img{
+        width: 50px;
+    }
+
 }
 
 @media screen and (min-width: 721px){
@@ -1183,6 +2172,11 @@ input[id="8"]:checked ~ .paginacion .elem-paginacion[for="8"]{
 }
 
 @media screen and (max-width: 450px){
+
+    .loader{
+        width: 50px;
+        height: 50px;
+    }
 
     .icon__menu{
         font-size: 26px;
@@ -1259,8 +2253,9 @@ input[id="8"]:checked ~ .paginacion .elem-paginacion[for="8"]{
 
 
     nav ul li ul{
-        left: 95px;
+        left: 100px;
         height: 400px;
+        width: 70%;
     }
 
 
@@ -1319,7 +2314,7 @@ input[id="8"]:checked ~ .paginacion .elem-paginacion[for="8"]{
     main{
         max-width: 450px;
         width: 100%;
-        margin-top: 130px;
+        margin-top: 0px;
     }
 
     article{
@@ -1354,6 +2349,10 @@ input[id="8"]:checked ~ .paginacion .elem-paginacion[for="8"]{
         color: white;
         border-radius: 10px;
         margin-bottom: 5px;
+    }
+
+    .lista_ft{
+        font-size: 12px;
     }
 
     .descripcion_stats{
@@ -1527,5 +2526,210 @@ input[id="8"]:checked ~ .paginacion .elem-paginacion[for="8"]{
     .galeria h1{
         font-size: 12px;
     }
+
+    .container_pilotos{
+        max-width: 450px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0px;
+    }
+
+    .container_info{
+        display: flex;
+        flex-direction: column;
+        border: 10px solid #d80000;
+        max-width: 450px;
+    }
+
+    .img_piloto{
+        order: 1;
+        max-height: 150px;
+        margin-top: 0px;
+    }
+
+    .img_piloto img{
+        max-width: 150px;
+        margin-bottom: 20px;
+        margin-top: 0px;
+    }
+
+    .info_piloto{
+        order: 2;
+        margin-top: 0px;
+    }
+
+    .info_piloto h1{
+        font-size: 18px;
+       text-align: center;
+    }
+
+    .info_piloto .num_piloto{
+        width: 50px;
+    }
+
+    .info_piloto h2{
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .vitrina{
+        order: 3;
+        position: static;
+        margin-top: 30px;
+    }
+
+    .vitrina img{
+        width: 40px;
+    }
+
+    .container_info p{
+        order: 4;
+        margin-top: 30px;
+        font-size: 12px;
+    }
+
+    .container_info .bio_hamilton{
+        margin-top: 30px;
+    }
+
+    .datos_piloto .info{
+        min-width: 0px;
+    }
+
+    .bandera-piloto img{
+        position: relative;
+        top: 0px;
+        width: 14px;
+        height: 9px;
+        margin-right: 5px;
+    }
+    
+    .escuderia-piloto img{
+        position: relative;
+        top: 2px;
+        width: 15px;
+        height: 12px;
+    }
+
+    .tabla_trayectoria_mobile{
+        margin-top: 30px;
+    }
+
+    .tabla_trayectoria_mobile h2{
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .tabla_trayectoria_mobile th{
+        padding: 5px 0px;
+        font-size: 10px;
+    }
+
+    .tabla_trayectoria_mobile td{
+        padding: 5px 0px;
+    }
+
+    .tabla_trayectoria_mobile .bandera_gp{
+        min-width: 60px;
+    }
+
+    .tabla_trayectoria_mobile .bandera_gp h6{
+        font-size: 8px;
+    }
+
+    .tabla_trayectoria_mobile .posicion_gp{
+        font-size: 10px;
+        min-width: 60px;
+    }
+
+    /*ESCUDERIAS*/
+
+    .container_escuderias{
+        max-width: 450px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .nombre_escuderia h1{
+        font-size: 20px;
+    }
+
+    .img_escuderia img{
+        width: 120px;
+    }
+
+    .img_escuderia_sponsor img{
+        max-width: 200px;
+        width: 100%;
+    }
+
+    .pilotos_escuderia h2{
+        font-size: 12px;
+    }
+
+    .piloto{
+        margin-bottom: 30px;
+    }
+
+    .piloto a{
+        margin-right: 0px;
+        padding: 0px 15px;
+    }
+
+    .piloto img{
+        max-width: 100px;
+    }
+
+    .piloto h3{
+        font-size: 8px;
+    }
+
+    .monoplaza{
+        margin-bottom: 20px;
+    }
+
+    .monoplaza_escuderia h2{
+        font-size: 12px;
+    }
+
+    .monoplaza_escuderia h3{
+        font-size: 11px;
+    }
+
+    .monoplaza img{
+        max-width: 250px;
+        width: 100%;
+    }
+
+    .vitrina_escuderias{
+        max-width: 350px;
+        width: 100%;
+    }
+
+    .margen_vitrina{
+        max-width: 350px;
+        width: 100%;
+    }
+
+    .vitrina_escuderias h2{
+        font-size: 16px;
+    }
+
+    .vitrina_escuderias img{
+        width: 40px;
+    }
+
+    .info_escuderia table{
+        max-width: 350px;
+        width: 100%;
+    }
+
+    .info_escuderia h2{
+        font-size: 12px;
+    }
+
 
 }
