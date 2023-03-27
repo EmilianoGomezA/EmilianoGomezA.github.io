@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Results summary component</title>
+
+</head>
+
+<body>
+
+    <main role="main">
+
+      <section class="results__container">
+
+        <div class="container__scoreboard">
+          <div class="scoreboard">
+            <h1 class="scoreboard__title">Your Result</h1>
+            <div class="scoreboard__result">
+              <p class="scoreboard__score">76</p>
+              <p class="scoreboard__limit">of 100</p>
+            </div>
+            <p class="scoreboard__status">Great</p>
+            <p class="scoreboard__description">You scored higher than 65% of the people who have taken these tests.</p>
+          </div>
+        </div>
+        
+        <div class="summary">
+          <p class="summary__title">Summary</p>
+        
+          <div class="summary__category reaction__bg">
+            <div class="category__item">
+              <img src="assets/images/icon-reaction.svg" alt="Reaction">
+              <p class="category__title reaction__title">Reaction</p>
+            </div>
+            <p class="category__score"><span class="score__obtained">80</span> / 100</p>
+          </div>
+        
+          <div class="summary__category memory__bg">
+            <div class="category__item">
+              <img src="assets/images/icon-memory.svg" alt="Memory">
+              <p class="category__title memory__title">Memory</p>
+            </div>
+            <p class="category__score"><span class="score__obtained">92</span> / 100</p>
+          </div>
+        
+          <div class="summary__category verbal__bg">
+            <div class="category__item">
+              <img src="assets/images/icon-verbal.svg" alt="Verbal">
+              <p class="category__title verbal__title">Verbal</p>
+            </div>
+            <p class="category__score"><span class="score__obtained">61</span> / 100</p>
+          </div>
+        
+          <div class="summary__category visual__bg">
+            <div class="category__item">
+              <img src="assets/images/icon-visual.svg" alt="Visual">
+              <p class="category__title visual__title">Visual</p>
+            </div>
+            <p class="category__score"><span class="score__obtained">72</span> / 100</p>
+          </div>
+        
+          <button class="continue__btn" type="button">Continue</button> 
+
+        </div>
+
+      </section>
+
+    </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/EmilianoGomezA">Emiliano Gómez</a>.
+  </footer>
+
+</body>
+</html>
