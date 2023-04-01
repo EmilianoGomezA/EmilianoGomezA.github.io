@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/logos/techfex.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap" rel="stylesheet">
+  <title>Techfex Technologies</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header__content">
+
+      <div class="header__mobile__left">
+        <div class="header__hamburguer">
+          <img class="header__hamburguer__icon" src="icons/hamburguer_menu.svg" alt="Menú">
+        </div>
+        
+          <a class="header__logo" href="index.html">
+            <img class="header__logo__image" src="img/logos/techfex_white.png" alt="Logo Techfex">
+            <h1 class="header__logo__text">Techfex</h1>
+          </a>
+      </div>
+
+      <div class="header__mobile__right">
+        <div class="header__search">
+          <img class="header__search__icon" src="icons/search.svg" alt="Búsqueda">
+        </div>
+        <div class="header__shopping__cart">
+          <img class="header__shopping__cart__icon" src="icons/shopping_cart.svg" alt="Carrito">
+          <div class="header__shopping__cart__items"></div>
+        </div>
+        <div class="header__user">
+          <img class="header__user__icon" src="icons/user_circle.svg" alt="Usuario">
+        </div>
+      </div>
+
+      <nav class="header__navbar--hidden" id="header__navbar">
+        <ul class="header__navbar__menu">
+          <li class="header__navbar__submenu"><a class="header__navbar__submenu__anchor" href="#">¿Quiénes somos?</a>
+          </li>
+          <hr>
+          <li class="header__navbar__submenu"><a class="header__navbar__submenu__anchor" href="#">Productos<img
+                class="header__navbar__submenu__anchor__icon" src="icons/chevron_down.svg" alt="Desplegable"></a></li>
+          <hr>
+          <li class="header__navbar__submenu"><a class="header__navbar__submenu__anchor" href="#">Contáctanos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="offers">
+    <div class="offers__container">
+      <img class="offers__container__left" src="icons/chevron_left.svg" alt="Mover a la izquierda">
+      <img class="offers__container__right" src="icons/chevron_right.svg" alt="Mover a la derecha">
+      <div class="offers__container__slide">
+        <div class="offers__container__slide__container">
+          <img class="offers__container__slide__container__image" src="img/offers/offer1.jpg" alt="Oferta 1">
+        </div>
+        <div class="offers__container__slide__container">
+          <img class="offers__container__slide__container__image" src="img/offers/offer2.jpg" alt="Oferta 2">
+        </div>
+        <div class="offers__container__slide__container">
+          <img class="offers__container__slide__container__image" src="img/offers/offer3.jpg" alt="Oferta 3">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="welcome">
+    <h1 class="welcome__title">Bienvenido a Techfex,</h1>
+    <p class="welcome__subtitle">¿qué estás buscando el día de hoy?</p>
+    <input type="search" class="welcome__search" name="welcome__search" id="welcome__search" placeholder="Celulares, laptops, etc.">
+  </section>
+
+  <section class="details">
+    <p class="details__in">En</p>
+    <div class="details__logo">
+      <img class="details__logo__image" src="img/logos/techfex_white.png" alt="Logo Techfex">
+      <h1 class="details__logo__text">Techfex</h1>
+    </div>
+
+    <p class="details__paragraph">Te ofrecemos los mejores dispositivos del mercado a un precio extraordinario.</p>
+
+    <div class="details__devices">
+      <div class="details__devices__content">
+        <img class="details__devices__content__image" src="icons/cellphone.svg" alt="Celulares">
+        <p class="details__devices__content__text">Celulares</p>
+      </div>
+      <div class="details__devices__content">
+        <img class="details__devices__content__image" src="icons/tablet.svg" alt="Tablet">
+        <p class="details__devices__content__text">Tablets</p>
+      </div>
+      <div class="details__devices__content">
+        <img class="details__devices__content__image" src="icons/laptop.svg" alt="Laptop">
+        <p class="details__devices__content__text">Laptops</p>
+      </div>
+      <div class="details__devices__content">
+        <img class="details__devices__content__image" src="icons/tv.svg" alt="TV">
+        <p class="details__devices__content__text">Televisiones</p>
+      </div>
+      <div class="details__devices__content">
+        <img class="details__devices__content__image__left" src="icons/headphones.svg" alt="Audífonos">
+        <img class="details__devices__content__image" src="icons/keyboard.svg" alt="Teclados">
+        <img class="details__devices__content__image__right" src="icons/mouse.svg" alt="Mouse">
+        <p class="details__devices__content__text">Periféricos</p>
+      </div>
+      <div class="details__devices__content">
+        <img class="details__devices__content__image" src="icons/dots.svg" alt="y más.">
+        <p class="details__devices__content__text">y más.</p>
+      </div>
+    </div>
+
+    <div class="details__brands">
+      <p class="details__brands__title">De la mano de <strong>marcas de confianza</strong></p>
+      <div class="details__brands__container">
+        <div class="details__brands__scroll">
+          <div class="details__brands__scroll__container">
+            <img class="details__brands__scroll__container__image" src="img/brands/acer.png" alt="">
+          </div>
+          <div class="details__brands__scroll__container">
+            <img class="details__brands__scroll__container__image" src="img/brands/apple.png" alt="">
+          </div>
+          <div class="details__brands__scroll__container">
+            <img class="details__brands__scroll__container__image" src="img/brands/asus.png" alt="">
+          </div>
+          <div class="details__brands__scroll__container">
+            <img class="details__brands__scroll__container__image" src="img/brands/dell.png" alt="">
+          </div>
+          <div class="details__brands__scroll__container">
+            <img class="details__brands__scroll__container__image" src="img/brands/hp.png" alt="">
+          </div>
+          <div class="details__brands__scroll__container">
+            <img class="details__brands__scroll__container__image" src="img/brands/huawei.png" alt="">
+          </div>
+          <div class="details__brands__scroll__container">
+            <img class="details__brands__scroll__container__image" src="img/brands/samsung.png" alt="">
+          </div>
+          <div class="details__brands__scroll__container">
+            <img class="details__brands__scroll__container__image" src="img/brands/xiaomi.png" alt="">
+          </div>
+          <div class="details__brands__scroll__container">
+            <img class="details__brands__scroll__container__image" src="img/brands/lenovo.png" alt="">
+          </div>
+          <div class="details__brands__scroll__container">
+            <img class="details__brands__scroll__container__image" src="img/brands/oppo.png" alt="">
+          </div>
+          <div class="details__brands__scroll__container">
+            <img class="details__brands__scroll__container__image" src="img/brands/sony.png" alt="">
+          </div>
+          <div class="details__brands__scroll__container">
+            <img class="details__brands__scroll__container__image" src="img/brands/astro.png" alt="">
+          </div>
+  
+          <div class="details__brands__scroll__container">
+            <img class="details__brands__scroll__container__image" src="img/brands/acer.png" alt="">
+          </div>
+          <div class="details__brands__scroll__container">
+            <img class="details__brands__scroll__container__image" src="img/brands/apple.png" alt="">
+          </div>
+          <div class="details__brands__scroll__container">
+            <img class="details__brands__scroll__container__image" src="img/brands/asus.png" alt="">
+          </div>
+          <div class="details__brands__scroll__container">
+            <img class="details__brands__scroll__container__image" src="img/brands/dell.png" alt="">
+          </div>
+          <div class="details__brands__scroll__container">
+            <img class="details__brands__scroll__container__image" src="img/brands/hp.png" alt="">
+          </div>
+          <div class="details__brands__scroll__container">
+            <img class="details__brands__scroll__container__image" src="img/brands/huawei.png" alt="">
+          </div>
+          <div class="details__brands__scroll__container">
+            <img class="details__brands__scroll__container__image" src="img/brands/samsung.png" alt="">
+          </div>
+          <div class="details__brands__scroll__container">
+            <img class="details__brands__scroll__container__image" src="img/brands/xiaomi.png" alt="">
+          </div>
+          <div class="details__brands__scroll__container">
+            <img class="details__brands__scroll__container__image" src="img/brands/lenovo.png" alt="">
+          </div>
+          <div class="details__brands__scroll__container">
+            <img class="details__brands__scroll__container__image" src="img/brands/oppo.png" alt="">
+          </div>
+          <div class="details__brands__scroll__container">
+            <img class="details__brands__scroll__container__image" src="img/brands/sony.png" alt="">
+          </div>
+          <div class="details__brands__scroll__container">
+            <img class="details__brands__scroll__container__image" src="img/brands/astro.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="populars">
+    <h2 class="populars__title"><img class="populars__title__image" src="icons/red_variants/flame.svg" alt=Popular">Populares</h3>
+    <div class="populars__container">
+
+      <div class="populars__container__product">
+        <img class="populars__container__product__discount" src="icons/discount_ticket.svg" alt="Descuento">
+        <img class="populars__container__product__image" src="img/products/cellphones/iphone14_cropped.png" alt="iPhone 14">
+        <a class="populars__container__product__name" href="#">iPhone 14 Pro Max</a>
+        <div class="populars__container__product__price">
+          <p class="populars__container__product__price__regular">$30,999</p>
+          <p class="populars__container__product__price__discount">$29,999</p>
+        </div>
+        <div class="populars__container__product__actions">
+          <button type="button" class="populars__container__product__actions__buy-now">
+            <img class="populars__container__product__actions__buy-now__icon" src="icons/black_variants/buy_ticket.svg" alt="Comprar">
+            <p class="populars__container__product__actions__buy-now__text">Comprar ahora</p>
+          </button>
+          <button type="button" class="populars__container__product__actions__add-to-cart">
+            <img class="populars__container__product__actions__add-to-cart__icon" src="icons/red_variants/add_to_cart.svg" alt="Carrito">
+            <img class="populars__container__product__actions__add-to-cart__icon__white" src="icons/add_to_cart.svg" alt="Carrito">
+            <p class="populars__container__product__actions__add-to-cart__text">Añadir al carrito</p>
+          </button>
+        </div>
+      </div>
+
+      <div class="populars__container__product">
+        <img class="populars__container__product__discount" src="icons/discount_ticket.svg" alt="Descuento">
+        <img class="populars__container__product__image" src="img/products/videogames/xbox_series_s.png" alt="Xbox Series S">
+        <a class="populars__container__product__name" href="#">Xbox Series S</a>
+        <div class="populars__container__product__price">
+          <p class="populars__container__product__price__regular">$6,000</p>
+          <p class="populars__container__product__price__discount">$5,499</p>
+        </div>
+        <div class="populars__container__product__actions">
+          <button type="button" class="populars__container__product__actions__buy-now">
+            <img class="populars__container__product__actions__buy-now__icon" src="icons/black_variants/buy_ticket.svg" alt="Comprar">
+            <p class="populars__container__product__actions__buy-now__text">Comprar ahora</p>
+          </button>
+          <button type="button" class="populars__container__product__actions__add-to-cart">
+            <img class="populars__container__product__actions__add-to-cart__icon" src="icons/red_variants/add_to_cart.svg" alt="Carrito">
+            <img class="populars__container__product__actions__add-to-cart__icon__white" src="icons/add_to_cart.svg" alt="Carrito">
+            <p class="populars__container__product__actions__add-to-cart__text">Añadir al carrito</p>
+          </button>
+        </div>
+      </div>
+
+      <div class="populars__container__product">
+        <img class="populars__container__product__discount" src="icons/discount_ticket.svg" alt="Descuento">
+        <img class="populars__container__product__image" src="img/products/videogames/playstation5.png" alt="PlayStation 5">
+        <a class="populars__container__product__name" href="#">PlayStation 5</a>
+        <div class="populars__container__product__price">
+          <p class="populars__container__product__price__regular">$13,499</p>
+          <p class="populars__container__product__price__discount">$11,999</p>
+        </div>
+        <div class="populars__container__product__actions">
+          <button type="button" class="populars__container__product__actions__buy-now">
+            <img class="populars__container__product__actions__buy-now__icon" src="icons/black_variants/buy_ticket.svg" alt="Comprar">
+            <p class="populars__container__product__actions__buy-now__text">Comprar ahora</p>
+          </button>
+          <button type="button" class="populars__container__product__actions__add-to-cart">
+            <img class="populars__container__product__actions__add-to-cart__icon" src="icons/red_variants/add_to_cart.svg" alt="Carrito">
+            <img class="populars__container__product__actions__add-to-cart__icon__white" src="icons/add_to_cart.svg" alt="Carrito">
+            <p class="populars__container__product__actions__add-to-cart__text">Añadir al carrito</p>
+          </button>
+        </div>
+      </div>
+
+      <div class="populars__container__product">
+        <img class="populars__container__product__discount" src="icons/discount_ticket.svg" alt="Descuento">
+        <img class="populars__container__product__image" src="img/products/cellphones/samsung_s23_cropped.png" alt="Samsung S23 Ultra">
+        <a class="populars__container__product__name" href="#">Samsung S23 Ultra</a>
+        <div class="populars__container__product__price">
+          <p class="populars__container__product__price__regular">$30,999</p>
+          <p class="populars__container__product__price__discount">$28,999</p>
+        </div>
+        <div class="populars__container__product__actions">
+          <button type="button" class="populars__container__product__actions__buy-now">
+            <img class="populars__container__product__actions__buy-now__icon" src="icons/black_variants/buy_ticket.svg" alt="Comprar">
+            <p class="populars__container__product__actions__buy-now__text">Comprar ahora</p>
+          </button>
+          <button type="button" class="populars__container__product__actions__add-to-cart">
+            <img class="populars__container__product__actions__add-to-cart__icon" src="icons/red_variants/add_to_cart.svg" alt="Carrito">
+            <img class="populars__container__product__actions__add-to-cart__icon__white" src="icons/add_to_cart.svg" alt="Carrito">
+            <p class="populars__container__product__actions__add-to-cart__text">Añadir al carrito</p>
+          </button>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <script src="js/include-html.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/offers_slider.js"></script>
+  <script src="js/shopping_cart.js"></script>
+</body>
+
+</html>
