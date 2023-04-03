@@ -17,12 +17,12 @@
 
     <nav class="header__mobile">
       <div class="header__mobile__left">
-        <a class="header__menu__open" href="#menu">
+        <button class="header__menu__open">
           <img class="header__menu__open__icon" src="icons/hamburguer_menu.svg" alt="Abrir menú">
-        </a>
-        <a class="header__menu__close" href="#">
+        </button>
+        <button class="header__menu__close">
           <img class="header__menu__close__icon" src="icons/red_variants/x.svg" alt="Cerrar menú">
-        </a>
+        </button>
         <a class="header__logo" href="index.html">
           <img class="header__logo__image" src="img/logos/techfex_white.png" alt="Logo Techfex">
           <h1 class="header__logo__text">Techfex</h1>
@@ -42,19 +42,17 @@
         </div>
       </div>
 
-      <div class="header__overlay"></div>
-
-      <ul class="header__mobile__menu" id="menu">
+      <ul class="header__mobile__menu" role="menu">
         <div class="header__mobile__menu__top">
           <div class="header__mobile__menu__top__logo">
             <img class="header__mobile__menu__top__logo__image" src="img/logos/techfex.png" alt="Logo Techfex">
             <h1 class="header__mobile__menu__top__logo__text">Techfex</h1>
           </div>
         </div>
-        <li class="header__mobile__menu__item">
+        <li class="header__mobile__menu__item" role="menuitem">
           <a href="#" class="header__mobile__menu__item__anchor"><img class="header__mobile__menu__item__icon" src="icons/red_variants/people.svg" alt="Nosotros">¿Quiénes somos?</a>
         </li>
-        <li class="header__mobile__menu__item">
+        <li class="header__mobile__menu__item" role="menuitem">
           <a href="#" class="header__mobile__menu__item__anchor"><img class="header__mobile__menu__item__icon" src="icons/red_variants/devices.svg" alt="Productos">Productos
           <img class="header__mobile__menu__item__arrow" src="icons/red_variants/chevron_down.svg" alt="Abrir submenú">
           <input type="checkbox" class="header__mobile__menu__item__checkbox"></a>
@@ -62,40 +60,96 @@
           <div class="header__mobile__submenu">
 
             <ul class="header__mobile__submenu__list">
-              <li class="header__mobile__submenu__list__item">
-                <a href="#" class="header__mobile__submenu__list__item__anchor">Celulares</a>
+              <li class="header__mobile__submenu__list__item" role="menuitem">
+                <a href="#" class="header__mobile__submenu__list__item__anchor" id="celulares">Celulares</a>
               </li>
-              <li class="header__mobile__submenu__list__item">
+              <li class="header__mobile__submenu__list__item" role="menuitem">
                 <a href="#" class="header__mobile__submenu__list__item__anchor">Laptops</a>
               </li>
-              <li class="header__mobile__submenu__list__item">
+              <li class="header__mobile__submenu__list__item" role="menuitem">
                 <a href="#" class="header__mobile__submenu__list__item__anchor">Tablets</a>
               </li>
-              <li class="header__mobile__submenu__list__item">
+              <li class="header__mobile__submenu__list__item" role="menuitem">
                 <a href="#" class="header__mobile__submenu__list__item__anchor">Televisiones</a>
               </li>
-              <li class="header__mobile__submenu__list__item">
+              <li class="header__mobile__submenu__list__item" role="menuitem">
                 <a href="#" class="header__mobile__submenu__list__item__anchor">Consolas</a>
               </li>
-              <li class="header__mobile__submenu__list__item">
+              <li class="header__mobile__submenu__list__item" role="menuitem">
                 <a href="#" class="header__mobile__submenu__list__item__anchor">Audífonos</a>
               </li>
-              <li class="header__mobile__submenu__list__item">
+              <li class="header__mobile__submenu__list__item" role="menuitem">
                 <a href="#" class="header__mobile__submenu__list__item__anchor">Teclados</a>
               </li>
-              <li class="header__mobile__submenu__list__item">
+              <li class="header__mobile__submenu__list__item" role="menuitem">
                 <a href="#" class="header__mobile__submenu__list__item__anchor">Mouse</a>
               </li>
             </ul>
           </div>
         </li>
-        <li class="header__mobile__menu__item">
+        <li class="header__mobile__menu__item" role="menuitem">
           <a href="#" class="header__mobile__menu__item__anchor"><img class="header__mobile__menu__item__icon" src="icons/red_variants/mail_forward.svg" alt="Contacto">Contáctanos</a>
         </li>
-        <li class="header__mobile__menu__item">
+        <li class="header__mobile__menu__item" role="menuitem">
           <a href="#" class="header__mobile__menu__item__anchor"><img class="header__mobile__menu__item__icon" src="icons/red_variants/question.svg" alt="Ayuda">Ayuda</a>
         </li>
       </ul>
+
+      <section class="header__mobile__login" role="log">
+        <button class="header__mobile__login__close">
+          <img class="header__mobile__login__close__icon" src="icons/red_variants/x.svg" alt="Cerrar menú">
+        </button>
+        <img class="header__mobile__login__logo" src="img/logos/techfex.png" alt="Techfex Logo">
+        <h2 class="header__mobile__login__title">Inicio de sesión</h2>
+        <a href="#" class="header__mobile__login__sign-in">Iniciar sesión</a>
+        <div class="header__mobile__login__sign-up">
+          <p class="header__mobile__login__sign-up__advice">¿No tienes una cuenta?</p>
+          <a href="#" class="header__mobile__login__sign-up__button">Crear una cuenta</a>
+          <p class="header__mobile__login__sign-up__message">Y obtén los beneficios de ser miembro Techfex; <span>descuentos</span>,<span> promociones y más</span>.</p>
+        </div>
+      </section>
+
+      <section class="header__mobile__search" role="search">
+        <h3 class="header__mobile__search__title">Búsqueda</h3>
+        <button class="header__mobile__search__close">
+          <img class="header__mobile__search__close__icon" src="icons/red_variants/x.svg" alt="Cerrar menú">
+        </button>
+        <input type="search" class="header__mobile__search__input" name="header__mobile__search__input" id="header__mobile__search__input" placeholder="¿Qué producto buscas hoy?" role="searchbox">
+        <button type="button" class="header__mobile__search__button"><img class="header__mobile__search__button__icon" src="icons/search.svg" alt="Buscar"></button>
+        <div class="header__mobile__search__filter">
+          <p class="header__mobile__search__filter__type">Tipo de producto</p>
+          <select class="header__mobile__search__filter__select" name="header__mobile__search__products" id="header__mobile__search__products">
+            <option value=""></option>
+            <option value="Celulares">Celulares</option>
+            <option value="Laptops">Laptops</option>
+            <option value="Consolas">Consolas</option>
+            <option value="Televisiones">Televisiones</option>
+            <option value="Tablets">Tablets</option>
+            <option value="Audífonos">Audífonos</option>
+            <option value="Teclados">Teclados</option>
+            <option value="Mouse">Mouse</option>
+          </select>
+        </div>
+        <div class="header__mobile__search__filter">
+          <p class="header__mobile__search__filter__type">Marca</p>
+          <select class="header__mobile__search__filter__select" name="header__mobile__search__brands" id="header__mobile__search__brands">
+            <option value=""></option>
+            <option value="Acer">Acer</option>
+            <option value="Apple">Apple</option>
+            <option value="Astro">Astro</option>
+            <option value="Asus">Asus</option>
+            <option value="Dell">Dell</option>
+            <option value="HP">HP</option>
+            <option value="Huawei">Huawei</option>
+            <option value="Lenovo">Lenovo</option>
+            <option value="Sony">Oppo</option>
+            <option value="Samsung">Samsung</option>
+            <option value="Sony">Sony</option>
+            <option value="Xiaomi">Xiaomi</option>
+          </select>
+        </div>
+      </section>
+      <div class="header__overlay"></div>
     </nav>
 
   </header>
@@ -374,7 +428,7 @@
     </div>
   </footer>
 
-  <script src="js/include-html.js"></script>
+  <script src="js/menu.js"></script>
   <script src="js/offers_slider.js"></script>
   <script src="js/shopping_cart.js"></script>
 </body>
